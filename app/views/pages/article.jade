@@ -1,0 +1,46 @@
+extends ../layout
+
+block content
+  .editor-container
+      form.form-horizontal(method="post", action="/admin/article", enctype="multipart/form-data")
+        .form-group
+          label.col-sm-2.control-label(for="inputCatetory") 文章分类
+          .col-sm-10
+            input#inputCatetory.form-control(type="text", name="article[catetoryName]", value=article.catetoryName)
+        .form-group
+          label.col-sm-2.control-label 分类选择
+          each cat in catetories
+            label.radio-inline
+              if article.catetory
+                input(type="radio", name="article[catetory]", value=cat._id, checked=cat._id.toString()==article.catetory.toString())
+              else
+                input(type="radio", name="article[catetory]", value=cat._id)
+              | #{cat.name}
+        .form-group
+          label.col-sm-2.control-label(for="inputTitle") 文章标题
+          .col-sm-10
+            input#inputTitle.form-control(type="text", name="article[title]", value=article.title)
+        .upload-container 文章图片
+          input#fileToUpload.fileupload(type='file', name='fileToUpload')
+        div
+          img#j_imgPic(src='')
+        .form-group
+          label.col-sm-2(for="inputImg") 文章图片路径
+          .col-sm-10
+            input#inputImg.form-control(type="text", name="article[img]", value=article.img)
+        .form-group
+          label.col-sm-2.control-label(for="inputSummary") 文章摘要
+          .col-sm-10
+            input#inputSummary.form-control(type="text", name="article[summary]", value=article.summary)
+        .form-group
+          label.col-sm-2.control-label(for="inputContent") 文章内容
+          .col-sm-10
+            textarea#inputContent.form-control(type="text", name="article[content]",value=article.content)
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type="submit") 录入  
+  script(src="/libs/wangEditor/dist/js/wangEditor.min.js")
+  script(src="/js/articleEditor.js")
+  script(src="/js/index.js")
+
+    //- $('body').click(function () {var text = editor.$txt.text();$("#inputContent").innerText=text;});

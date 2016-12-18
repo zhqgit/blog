@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  .index-container
+    #main
+      //- each cat in catetories
+      //-     .1
+      //-       h5
+      //-         a(href='#') #{cat.name}
+      //-     .2
+      //-       if cat.articles && cat.articles.length > 0
+      //-         each item in cat.articles
+      //-           .thumbnail
+      //-             .caption
+      //-               h4 
+      //-                 a(href="/article/#{item._id}") #{item.title}
+      //-             if item.content.length < 1000
+      //-               -var len = item.content.length/5 
+      //-               p !{item.content.substring(0,len)}...
+      //-             else
+      //-               p !{item.content.substring(0,200)}...
+  
+    //- #load-container
+    //-   .loader
+    //-     .loading-1
+    //-     .loading-2 Loading...
+    //- #side
+    //-   .upload-container
+    //-     input#fileToUpload.fileupload(type='file', name='fileToUpload')
+    //- div
+    //-   img#j_imgPic(src='')
+      //- #time.side-part
+      //-   if pvresult
+      //-     h1 zai
+      //-   each cat in result
+      //-     a #{cat._id.year}年#{cat._id.month}月(#{cat.count})
+      //- #read.side-part
+      //-   //- each pvcat in pvresult
+      //-   //-   li #{pvcat.title}(#{pvcat.pv})
+      //- #comment.side-part
+  script(src="/js/index.js")   
