@@ -1,13 +1,13 @@
-var express = require('express')
-var path = require('path')
-var mongoose = require('mongoose')
+var express = require('express');
+var path = require('path');
+var mongoose = require('mongoose');
 
-var bodyParser = require("body-parser")
-var cookieParser = require("cookie-parser")
-var session = require("express-session")
-var mongoStore = require('connect-mongo')(session)
-var logger = require("morgan")
-var serveStatic = require("serve-static")
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var mongoStore = require('connect-mongo')(session);
+var logger = require('morgan');
+var serveStatic = require('serve-static');
 
 //第三方账号登录---start
 // var passport = require('passport')
@@ -75,7 +75,7 @@ app.use(session({
     })
 }))
 app.use(busboy());
-var env = process.env.NODE_ENV || "development"
+var env = process.env.NODE_ENV || 'development';
 
 if ('development' === env) {
     app.set('showStackError', true)

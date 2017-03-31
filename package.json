@@ -1,6 +1,6 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
+  "name": "zhqblog",
+  "version": "1.0.1",
   "description": "blog",
   "main": "app.js",
   "directories": {
@@ -40,11 +40,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "\"\""
+    "url": "git+https://github.com/zhqgit/blog.git"
   },
   "keywords": [
     "blog"
   ],
   "author": "zhqGit",
-  "license": "ISC"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhqgit/blog/issues"
+  },
+  "homepage": "https://github.com/zhqgit/blog#readme"
 }

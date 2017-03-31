@@ -1,0 +1,358 @@
+body{
+    margin: 0;
+    background: #fff;
+    color: #ffffff;
+}
+
+.main-wrapper{
+    background: url("/images/banner.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+header{
+    background: rgba(0,0,0,0.3);
+}
+
+a{
+    font-size: 18px;
+    font-family: 微软雅黑;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav{
+    height: 50px;
+    background: transparent;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav .logo{
+    float: left;
+}
+
+nav .logo a{
+    margin-left: 25px;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul{
+    margin: 0px;
+    float: right;
+    list-style: none;
+}
+
+nav ul li,nav .logo{
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+nav ul li a,nav .logo a{
+    line-height: 50px;
+    display: inline-block;
+    height: 50px;
+    color: #ffffff;
+}
+
+#banner{
+    background: transparent;
+    height: 700px;
+}
+
+#banner .inner{
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+}
+#banner .inner h1{
+    margin: 0px;
+}
+
+#banner .inner #line{
+    width: 180px;
+    margin: 0 auto;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding: 15px 0px;
+}
+
+#banner .inner p{
+    font-family: "Microsoft YaHei UI Light";
+    font-size: 18px;
+    /*color: #ffffff;*/
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+button{
+    background: #fd0002;
+    font-size: 20px;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 5%;
+    width: 150px;
+    height: 50px;
+}
+
+#banner .inner .more{
+    margin-top: 260px;
+}
+
+#banner .inner .more a{
+    text-decoration: none;
+}
+
+
+
+.hr{
+    width: 100%;
+    height: 2px;
+    margin: 20px auto;
+}
+
+
+
+
+
+
+
+.green-section{
+    text-align: center;
+    background: #23c792;
+    padding: 100px 0px;
+}
+
+.wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.green-section .wrapper h2{
+    margin-top: 0px;
+}
+
+.green-section .wrapper .hr{
+    background: #b1b1b1;
+    width: 60%;
+}
+
+.green-section .wrapper p {
+    font-family: "Microsoft YaHei UI Light";
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+
+.green-section .wrapper .icon-team .icon{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: #51bdbd;
+    transform: rotate(45deg);
+    margin:20px;
+    border: 1px solid #ffffff;
+}
+
+.green-section .wrapper .icon-team .icon i{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-45deg);
+    margin:10px;
+
+}
+
+.green-section .wrapper .icon-team{
+    margin-top: 60px;
+}
+
+
+
+
+
+
+.gray-section{
+    background: #333333;
+}
+
+
+.gray-section .img-section{
+    width: 45%;
+}
+
+.gray-section .img-section img{
+    width: 100%;
+}
+
+.gray-section .text-section{
+    width: 55%;
+}
+
+.gray-section .text-section h2{
+    margin-top: 0px;
+}
+
+.article-preview > div{
+    float: left;
+    font-size: 0;
+}
+
+/*
+    解决因为img-section元素和text-section元素浮动而造成的元素坍缩问题
+    .article-preview:after是在div class="article-preview"元素的最后加入content: "";
+    并且让加入的内容表现为display: block和clear: both;
+    由于这两个属性的加入导致加入的内容被推到两个浮动元素之下
+    所以撑开了原本坍缩的div class="article-preview"元素
+*/
+
+.article-preview:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.text-section{
+    position: relative;
+    top: 100px;
+    left: 80px;
+}
+
+.text-section h2{
+    font-size: 24px;
+}
+
+.text-section p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.article-preview:nth-child(odd){
+    background: rgba(255,255,255,0.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.purple-section{
+    background: #3f3965;
+    padding: 80px;
+}
+
+.purple-section .heading-wrapper{
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.purple-section .hr{
+    background: #504e54;
+    width: 60%;
+}
+
+.card{
+    float: left;
+    width: 50%;
+    min-height: 300px;
+    padding: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    position: relative;
+}
+
+.card-group .card .big{
+    position: absolute;
+    left: 15px;
+    color: #3dec95;
+}
+
+.purple-section h3{
+    font-size: 24px;
+}
+
+.purple-section .card p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.card:first-child{
+    background: rgba(0,0,0,0.04);
+}
+
+.card:nth-child(2){
+    background: rgba(0,0,0,0.08);
+}
+
+.card:nth-child(3){
+    background: rgba(0,0,0,0.12);
+}
+
+.card:nth-child(4){
+    background: rgba(0,0,0,0.16);
+}
+
+.card:nth-child(5){
+    background: rgba(0,0,0,0.20);
+}
+
+.card:nth-child(6){
+    background: rgba(0,0,0,0.24);
+}
+
+
+
+
+
+footer{
+    background: #333333;
+    min-height: 200px;
+    text-align: center;
+}
+
+.share-group{
+    margin: 0 auto;
+    display: block;
+    width: 1080px;
+    padding: 50px;
+}
+
+.share-group li{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+footer .copy{
+    font-family: "Microsoft YaHei UI Light";
+}
+
+
+
+
+
+
+
+
