@@ -189,7 +189,7 @@ button{
 
 
 .gray-section .img-section{
-    width: 45%;
+    width: 50%;
 }
 
 .gray-section .img-section img{
@@ -197,7 +197,7 @@ button{
 }
 
 .gray-section .text-section{
-    width: 55%;
+    width: 50%;
 }
 
 .gray-section .text-section h2{
@@ -225,15 +225,24 @@ button{
 
 .text-section{
     position: relative;
-    top: 100px;
-    left: 80px;
+    /*top: 100px;
+    left: 50px;*/
+}
+
+.text{
+    position: relative;
+    top:100px;
+    left:50px;
+    width: 400px;
 }
 
 .text-section h2{
-    font-size: 24px;
+    font-size: 20px;
+    width: 300px;
 }
 
 .text-section p{
+    width: 300px;
     font-size: 18px;
     letter-spacing: 1px;
 }
@@ -334,7 +343,7 @@ footer{
 .share-group{
     margin: 0 auto;
     display: block;
-    width: 1080px;
+    width: 900px;
     padding: 50px;
 }
 

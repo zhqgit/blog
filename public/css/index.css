@@ -365,12 +365,13 @@ footer .copy {
 #back_top {
     position: fixed;
     bottom: 80px;
-    left: 620px;
+    left: 600px;
     display: none;
     width: 32px;
     height: 32px;
     margin-left: 50%;
     background: url('/images/back_top.png') no-repeat left top;
+    color: #000;
 }
 
 
