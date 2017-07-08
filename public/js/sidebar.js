@@ -1,7 +1,7 @@
 $(function() {
 
 	//为sidebar按钮绑定点击事件
-	var nav = $('.nav-container'),
+	var nav = $('.navigation'),
 		mask = $('.mask'),
 		sidebar = $('#sidebar');
 

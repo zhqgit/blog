@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      each item in collections
+        h1 #{item.name}
+            //- tr(class="item-id-#{item._id}")
+            //-   td #{item.name}
+  script(src="/build/admin.min.js")

@@ -252,6 +252,16 @@ $(function() {
          }
          return item;
      });
+     editor.onchange = function () {
+        // 编辑区域内容变化时，实时打印出当前内容
+        console.log(this.$txt.html());
+    };
 
 	editor.create();
+    editor.$txt.html('要初始化的内容');
+    var text = editor.$txt.text();
+    text = text.replace(/<p>/, '');
+    text = text.replace(/<\/p>/, '');
+    console.log(text);
+    editor.$txt.append(text);
 });

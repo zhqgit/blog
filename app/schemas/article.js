@@ -3,11 +3,11 @@ var Schema = mongoose.Schema
 var ObjectId = Schema.Types.ObjectId
 
 var ArticleSchema = new mongoose.Schema({
+  //Schema  ：  一种以文件形式存储的数据库模型骨架，不具备数据库的操作能力
+
   author: String,
   title: String,
-  summary: String,
   content: String,
-  img:String,
   pv: {
     type: Number,
     default: 0

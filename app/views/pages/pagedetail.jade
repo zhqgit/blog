@@ -2,16 +2,19 @@ extends ../layout
 
 block content
   .article-container
-      .article-panel
+    .jumbotron.article-panel
         .article-heading
-          h3 
-            i.icon-trophy
-            span #{article.title}
-          //- #articleDataty                
-          //-   |阅读量：
-          //-   span.badge #{article.pv}
-          //-   |评论：                              
-          //-   span.badge (#{comments.length})
+          h3 #{article.title}
+          .article-detail
+            ul.list-group
+              li.list-group-item
+                button.btn.btn-default 
+                  i.icon-cloud
+                  span.span #{moment(article.meta.updateAt).format('MM/DD/YYYY')}
+              li.list-group-item
+                button.btn.btn-default 
+                  i.icon-cloud
+                  span.span 前端         
         .article-content
           article
             !{article.content}
@@ -55,4 +58,4 @@ block content
     #side
   script(src="/build/detail.min.js")
   script(src="/libs/wangEditor/dist/js/wangEditor.min.js")
-  script(src="/js/commentEditor.js")
+  //- script(src="/js/commentEditor.js")

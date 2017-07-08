@@ -1,6 +1,37 @@
+/*
+==============================
+-----------维护信息-----------
+Site:             zhqGit.top
+Author:           zhqgit
+Updated:          2017/6/19
+Updated by:       zhqgit
+==============================
+*/
+
+/*
+=================================
+------Font Size(字体大小)--------
+Body font-size:          16px;
+=================================
+*/
+
+
+/*
+=================================
+------COLORS(公用颜色标记)--------
+Body background:         #000
+Container background:    #fff
+Links:                   #000
+Body text:               #000
+=================================
+*/
+
+
 body {
     color: #000;
     font-family: 微软雅黑;
+    font-size: 10px;
+    background-color: #f1f1f1;
 }
 
 div {
@@ -40,39 +71,58 @@ a:active {
     text-decoration: none;
 }
 
-
 /*
-    -------------------
-    navigation styles
-    -------------------
+    --------------------
+       Header Styles 
+    -----------------------------
  */
-
-.nav-container {
-    background-color: #000;
-    /*background-color:#8e7d7d;*/
+.header-row {
     position: fixed;
-    width: 300px;
-    top: 0;
-    bottom: 0;
-    right: -300px;
-    z-index: 100;
+    width: 100%;
+    height: 5em;
+    background-color: #090723;
+    z-index: 99;
 }
 
-.nav-container a {
-    text-decoration: none;
+.header-row h3 {
+    color: #fff;
+    /*font-family: 微软雅黑;*/
+    font-size: 1.6em;
+    position: relative;
+    top: 0.8em;
+    left: 6em;
+}
+
+#sidebar {
+    display: inline-block;
+    position: absolute;
+    top: 0.8em;
+    right: 1.2em;
+    width: 3.2em;
+    height: 3.2em;
+    background: url(../images/more.png) no-repeat;
+}
+
+.navigation {
+    background-color: #000;
+    position: fixed;
+    width: 30em;
+    top: 0;
+    bottom: 0;
+    right: -30em;
+    z-index: 100;
     color: #fff;
 }
 
-.nav-container .nav-list {
-    /*padding: 10px;*/
-    margin: 50px 0 0 0;
+.navigation .nav-list {
+    margin: 5em 0 0 0;
 }
 
-.nav-container .login-list {
+/*.navigation .login-list {
     float: right;
-}
+}*/
 
-.nav-container .btn-group,
+.navigation .navlist,
 .contact-list ul {
     padding: 0;
     list-style: none;
@@ -80,56 +130,57 @@ a:active {
     margin: 0;
 }
 
-.nav-container .btn-group li {
+.navigation .navlist li {
     width: 100%;
 }
 
-.nav-container .btn-group li a {
+.navigation .navlist li a {
     display: inline-block;
-    line-height: 39px;
+    line-height: 2.5em;
     width: 100%;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 4em;
     letter-spacing: .2em;
 }
 
-.nav-container .btn-group a:hover,
+.navigation .navlist a:hover,
 .contact-list li a:hover {
     color: #000;
     background: rgba(255, 255, 255, 0.99);
-    letter-spacing: 2px;
+    letter-spacing: .2em;
 }
 
 .contact-list li a {
     display: inline-block;
     text-align: center;
     float: left;
-    line-height: 39px;
-    font-size: 14px;
+    line-height: 2.5em;
+    font-size: 1.4em;
     width: 50%;
     padding-left: 0;
     letter-spacing: .2em;
 }
 
-.nav-container h4 {
-    padding-left: 30px;
-    margin-bottom: 20px;
+.navigation h4 {
+    padding-left: 3em;
+    margin-bottom: 2em;
 }
 
-
 /*
-    -------------------
-    sidebar styles
-    -------------------
+    --------------
+    footer styles
+    --------------
  */
 
-#sidebar {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 32px;
-    height: 32px;
-    background: url(../images/more.png) no-repeat;
+footer {
+    background: #090723;
+    height: 50px;
+    text-align: center;
+}
+
+footer .copy {
+    color: #fff;
+    padding-top: 15px;
+    font-family: "Microsoft YaHei UI Light";
 }
 
 
@@ -151,118 +202,6 @@ a:active {
 }
 
 
-/*
-    ---------------
-    nav-row styles
-    ---------------
- */
-
-.nav-row {
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    background-color: #090723;
-    z-index: 99;
-}
-
-.nav-row h3 {
-    color: #fff;
-    font-family: 微软雅黑;
-    font-size: 18px;
-    position: absolute;
-    top: 12px;
-    left: 100px;
-}
-
-
-/*
-    ---------------
-    loading styles
-    ---------------
- */
-
-/*#load-container {
-    height: 300px;
-    padding-top: 130px;
-}
-
-.loader {
-    width: 750px;
-    margin: 50px auto 70px;
-    position: relative;
-}
-
-.loader .loading-1 {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    border: 1px solid #69d2e7;
-    border-radius: 10px;
-    animation: turn 30s linear 29.5s infinite;
-}
-
-.loader .loading-1:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    background: #69d2e7;
-    box-shadow: 10px 0px 15px 0px #69d2e7;
-    animation: load 15s linear infinite;
-}
-
-.loader .loading-2 {
-    width: 100%;
-    position: absolute;
-    top: 10px;
-    color: #69d2e7;
-    font-size: 22px;
-    text-align: center;
-    animation: bounce 2s linear infinite;
-}
-
-@keyframes load {
-    0% {
-        width: 0%;
-    }
-    87.5%,
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes turn {
-    0% {
-        transform: rotateY(0deg);
-    }
-    6.25%,
-    50% {
-        transform: rotateY(180deg);
-    }
-    56.25%,
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-
-@keyframes bounce {
-    0%,
-    100% {
-        top: 10px;
-    }
-    12.5% {
-        top: 30px;
-    }
-}*/
-
-
-/*
-    ---------------
-    index styles
-    ---------------
- */
-
 
 .index-container {
     /*padding-top: 50px;*/
@@ -273,15 +212,11 @@ a:active {
     top:50px;
 }
 
-.index-container #main {
-    /*width: 750px;*/
-    background-color: #f00;
-    /*float: left;*/
-}
+
 
 .index-container #sidebar {
     width: 300px;
-    background-color: #f00;
+    /*background-color: #f00;*/
     position: absolute;
     right: 0px;
     top:0px;
@@ -318,8 +253,8 @@ a:active {
 }
 
 
-/*.loginCon{ 
-    position:relative; 
+/*.loginCon{
+    position:relative;
     width:670px;
     height:380px;
     background:url(/images/loginBg.png) #2A2C2E center center no-repeat;
@@ -329,7 +264,7 @@ a:active {
 /*admin.article.new*/
 
 #inputContent {
-    height: 500px;
+    height: 50px;
 }
 
 #articleData {
@@ -337,23 +272,6 @@ a:active {
 }
 
 
-/*
-    --------------
-    footer styles
-    --------------
- */
-
-footer {
-    background: #090723;
-    height: 50px;
-    text-align: center;
-}
-
-footer .copy {
-    color: #fff;
-    padding-top: 15px;
-    font-family: "Microsoft YaHei UI Light";
-}
 
 
 /*
@@ -385,7 +303,7 @@ footer .copy {
     min-height: 800px;
 }
 
-.weblist-container .article-content:nth-child(odd) {
+/*.weblist-container .article-content:nth-child(odd) {
     color: #fff;
     background: rgba(0, 0, 0, .9);
 }
@@ -393,54 +311,82 @@ footer .copy {
 .weblist-container .article-content:nth-child(even) {
     color: #fff;
     background: #3b4b99;
-}
+}*/
 
-.weblist-container .weblist-title,
+/*.weblist-container .weblist-title,
 .article-container .article-heading {
     background: rgba(255, 255, 255, .5);
     color: #000;
     height: 60px;
     margin-bottom: 20px;
 }
+*/
 
-.weblist-container .weblist-title h3,
+/*.weblist-container .weblist-title h3,
 .weblist-container .article-title {
     margin: 0;
     padding-left: 30px;
     padding-top: 15px;
-}
+}*/
 
 .weblist-container .article-content {
-    height: 150px;
+    height: 450px;
     background: #fff;
     margin-bottom: 10px;
 }
 
 .weblist-container .article-title {
-    padding-bottom: 15px;
+    padding: 15px 35px;
+    height: 150px;
+
     border-bottom: 1px solid rgba(0, 0, 0, .3);
+
 }
 
 .weblist-container .article-title a {
     display: inline-block;
     width: 100%;
-    height: 100%;
+}
+
+.weblist-container .article-title h2{
+    /*color: red;*/
+    font-size: 30px;
+    font-weight: 500;
+    /*margin: 20px 0;*/
 }
 
 .weblist-container .article-content p {
-    padding-left: 30px;
+    /*padding-left: 30px;*/
 }
 
-.weblist-container .article-img {
-    float: left;
-    width: 100px;
-    height: 100px;
+.weblist-container .article-content .article-data{
+    padding: 20px 30px;
 }
 
 .weblist-container .article-summary {
     padding-left: 100px;
 }
 
+.weblist-container .weblist-content .article-detail{
+
+}
+
+#article-time,#article-author,#article-catetory{
+    float: left;
+}
+
+
+.weblist-content .list-group-item,.article-container .list-group-item{
+    border:0;
+    padding: 0;
+    float: left;
+    margin-left:10px;
+}
+
+.weblist-content .span,.article-container .span{
+    margin-left: 6px;
+    font-size: 12px;
+}
 
 /*
     -----------------
@@ -450,32 +396,32 @@ footer .copy {
 
 .article-container,
 .weblist-container,
-.editor-container,
 .sign-container {
     width: 100%;
     /*margin:50px auto 20px;*/
-    /*background-color: #fff;*/
     padding: 60px 350px 0 350px;
-    background: url(../images/bg-yellow.png) repeat;
+    /*background: url(../images/bg-yellow.png) repeat;*/
 }
 
 .article-container .article-panel {
-    padding: 20px;
     background-color: #fff;
+    padding-top: 30px;
+    padding: 0;
 }
 
 .article-container .article-heading {
-    background: rgba(0, 0, 0, 0.4);
+    height: 150px;
+    border-bottom: 1px solid #d3d5d7;
+    padding: 30px 40px;
 }
 
 .article-container .article-heading h3 {
-    margin: 0;
-    padding-left: 20px;
-    padding-top: 15px;
+   color: #f15a23;
 }
 
 .article-container .article-content {
     min-height: 550px;
+    padding: 15px 30px;
 }
 
 
@@ -501,14 +447,23 @@ footer .copy {
  */
 
 .editor-container {
-    z-index: -1;
+    /*z-index: -100;*/
+    /*width: 800px;*/
+    background-color: #f1f1f1;
+    padding-top:60px;
+    position: relative;
+}
+
+#form-artilce{
+    width: 1100px;
+    margin: 0 auto;
 }
 
 .upload-container {
     /*background-image: url(../images/rv/add.jpg);*/
     /*background-repeat: no-repeat;*/
     background: #fff;
-    width: 100%;
+    width: 50%;
     height: 80px;
     padding-bottom: 10px;
     display: inline-block;
@@ -527,7 +482,9 @@ footer .copy {
     height: 50px;
 }
 
-
+#inputContent{
+    height: 450px;
+}
 
 
 
@@ -546,4 +503,68 @@ footer .copy {
 }
 
 
+.article-container #my p{
+    font-size: 16px;
+    font-weight: bold;
+}
 
+
+
+/*
+    --------------------
+        Main Styles
+    --------------------
+*/
+.main{
+    /*color: #000;*/
+    width: 100%;
+    padding: 5em 0 0;
+}
+
+.main .weblist-content{
+    margin: 0 10em;
+    /*height: 100em;*/
+}
+
+.main .article-content{
+    height: 20em;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 4px 4px 18px rgba(0,0,0,0.46);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.main .article-title h2{
+    margin: 0;
+    font-size: 1.2em;
+    color: #009a61;
+}
+
+.main a{
+    color: #000;
+}
+
+.main .article-data p{
+    font-size: 1.3em;
+}
+
+.main .article-info{
+    width: 100%;
+}
+
+.main .article-category, .main .article-tag{
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.main .article-category{
+    background-color: #009a61;
+    height: 2em;
+}
+
+.main .article-tag{
+    background-color: #000;
+}

@@ -2,15 +2,20 @@ extends ../layout
 
 block content
 	.weblist-container
-		.weblist-title 
-			h3 /杂记
 		.weblist-content
 			if catetory.articles && catetory.articles.length > 0
 				each item in catetory.articles
 					.article-content
-						h4.article-title 
-							a(href="/article/#{item._id}") !{item.title}
-						if item.summary
-							p !{item.summary}
-						else 
-							p !{item.content.substring(0,20)}...
+						.article-title 
+							a(href="/article/#{item._id}")
+								h2 !{item.title}
+							.article-detail
+								ul.list-group
+									li.list-group-item
+										button.btn.btn-default 
+											i.icon-cloud
+											span.span #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
+									li.list-group-item
+										button.btn.btn-default 
+											i.icon-cloud
+											span.span 杂记

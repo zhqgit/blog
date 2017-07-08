@@ -14,7 +14,7 @@
 // 	CanvasParticle(config);
 // }
 
-// $(function() {
+$(function() {
 //     var s0 = '以肮脏龌蹉的匠人之手，我必对你们痛加报复！'
 //     var s1 = '弱小和无知不是生存的障碍，傲慢才是.';
 //     var s2 = '这些残暴的欢愉，终将以残暴结局！';
@@ -98,4 +98,6 @@
         numberOfPages: 5
     }
     $('#page1').bootstrapPaginator(options);
+
+    // $('.wangEditor-menu-shadow').css({'position':'relative'});
 })

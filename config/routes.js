@@ -6,15 +6,17 @@ var Category = require('../app/controllers/category')
 var Catetory = require('../app/controllers/catetory')
 var Article = require('../app/controllers/article')
 
+var Collection = require('../app/controllers/collection')
+
 var Upload = require('../app/controllers/server-for-cros')
 
 var multipart = require('connect-multiparty')
 var multipartMiddleware = multipart()
 
-module.exports = function(app) {
+module.exports = function (app) {
 
   // pre handle user
-  app.use(function(req, res, next) {
+  app.use(function (req, res, next) {
     var _user = req.session.user
 
     app.locals.user = _user
@@ -49,6 +51,8 @@ module.exports = function(app) {
   app.get('/admin/article/list', User.signinRequired, User.adminRequired, Article.list)
   app.get('/admin/article/weblist', Article.weblist)
   app.get('/admin/article/lifelist', Article.lifelist)
+  app.get('/admin/article/my', Article.mydetail)
+  app.get('/admin/article/resume', Article.resume)
   app.delete('/admin/article/list', User.signinRequired, User.adminRequired, Article.del)
 
   // Comment
@@ -66,6 +70,10 @@ module.exports = function(app) {
   app.get('/admin/catetory/new', User.signinRequired, User.adminRequired, Catetory.new)
   app.post('/admin/catetory', User.signinRequired, User.adminRequired, Catetory.save)
   app.get('/admin/catetory/list', User.signinRequired, User.adminRequired, Catetory.list)
+
+  //Collection
+  app.get('/collectionlist', Collection.list)
+
 
 
   // results

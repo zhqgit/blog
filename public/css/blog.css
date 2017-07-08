@@ -1,10 +1,11 @@
-body{
+/*body{
     margin: 0;
     background: #fff;
     color: #ffffff;
 }
+*/
 
-.main-wrapper{
+.main-wrapper {
     background: url("/images/banner.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -12,33 +13,34 @@ body{
     background-position: center center;
 }
 
-header{
-    background: rgba(0,0,0,0.3);
+header {
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
 }
 
-a{
+a {
     font-size: 18px;
     font-family: 微软雅黑;
-    color: #ffffff;
-    text-decoration: none;
+    /*color: #ffffff;*/
+    /*text-decoration: none;*/
 }
 
-nav{
+nav {
     height: 50px;
     background: transparent;
 }
 
-.clearfix:after{
+.clearfix:after {
     content: "";
     display: block;
     clear: both;
 }
 
-nav .logo{
+nav .logo {
     float: left;
 }
 
-nav .logo a{
+nav .logo a {
     margin-left: 25px;
     font-size: 18px;
     font-family: 微软雅黑;
@@ -46,50 +48,54 @@ nav .logo a{
     letter-spacing: 1px;
 }
 
-nav ul{
+nav ul {
     margin: 0px;
     float: right;
     list-style: none;
 }
 
-nav ul li,nav .logo{
+nav ul li,
+nav .logo {
     display: inline-block;
     line-height: 50px;
     margin-right: 20px;
 }
 
-nav ul li a,nav .logo a{
+nav ul li a,
+nav .logo a {
     line-height: 50px;
     display: inline-block;
     height: 50px;
     color: #ffffff;
 }
 
-#banner{
+#banner {
     background: transparent;
     height: 700px;
 }
 
-#banner .inner{
+#banner .inner {
     max-width: 300px;
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 160px;
+    top: 600px;
 }
-#banner .inner h1{
+
+#banner .inner h1 {
     margin: 0px;
 }
 
-#banner .inner #line{
+
+/*#banner .inner #line{
     width: 180px;
     margin: 0 auto;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
     padding: 15px 0px;
-}
+}*/
 
-#banner .inner p{
+#banner .inner p {
     font-family: "Microsoft YaHei UI Light";
     font-size: 18px;
     /*color: #ffffff;*/
@@ -97,7 +103,8 @@ nav ul li a,nav .logo a{
     margin-bottom: 40px;
 }
 
-button{
+
+/*button{
     background: #fd0002;
     font-size: 20px;
     cursor: pointer;
@@ -105,109 +112,97 @@ button{
     border-radius: 5%;
     width: 150px;
     height: 50px;
+}*/
+
+#banner .inner .more {
+    /*margin-top: 260px;*/
 }
 
-#banner .inner .more{
-    margin-top: 260px;
-}
-
-#banner .inner .more a{
+#banner .inner .more a {
     text-decoration: none;
 }
 
-
-
-.hr{
+.hr {
     width: 100%;
     height: 2px;
     margin: 20px auto;
 }
 
-
-
-
-
-
-
-.green-section{
+.green-section {
     text-align: center;
     background: #23c792;
     padding: 100px 0px;
 }
 
-.wrapper{
+.green-wrapper {
     max-width: 1080px;
     margin: 0 auto;
 }
 
-.green-section .wrapper h2{
+.green-section .green-wrapper h2 {
     margin-top: 0px;
 }
 
-.green-section .wrapper .hr{
+.green-section .green-wrapper .hr {
     background: #b1b1b1;
     width: 60%;
 }
 
-.green-section .wrapper p {
+.green-section .green-wrapper p {
     font-family: "Microsoft YaHei UI Light";
     font-size: 14px;
     margin-bottom: 60px;
 }
 
-.green-section .wrapper .icon-team .icon{
+.green-section .green-wrapper .icon-team .icon {
     display: inline-block;
     width: 80px;
     height: 80px;
     background: #51bdbd;
-    transform: rotate(45deg);
-    margin:20px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin: 20px;
     border: 1px solid #ffffff;
 }
 
-.green-section .wrapper .icon-team .icon i{
+.green-section .green-wrapper .icon-team .icon i {
     display: inline-block;
     width: 80px;
     height: 80px;
-    transform: rotate(-45deg);
-    margin:10px;
-
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin: 10px;
 }
 
-.green-section .wrapper .icon-team{
+.green-section .green-wrapper .icon-team {
     margin-top: 60px;
 }
 
-
-
-
-
-
-.gray-section{
+.gray-section {
     background: #333333;
 }
 
-
-.gray-section .img-section{
+.gray-section .img-section {
     width: 50%;
 }
 
-.gray-section .img-section img{
+.gray-section .img-section img {
     width: 100%;
 }
 
-.gray-section .text-section{
+.gray-section .text-section {
     width: 50%;
 }
 
-.gray-section .text-section h2{
+.gray-section .text-section h2 {
     margin-top: 0px;
 }
 
-.article-preview > div{
+.article-preview>div {
     float: left;
     font-size: 0;
 }
+
 
 /*
     解决因为img-section元素和text-section元素浮动而造成的元素坍缩问题
@@ -217,151 +212,335 @@ button{
     所以撑开了原本坍缩的div class="article-preview"元素
 */
 
-.article-preview:after{
+.article-preview:after {
     content: "";
     display: block;
     clear: both;
 }
 
-.text-section{
+.text-section {
     position: relative;
     /*top: 100px;
     left: 50px;*/
 }
 
-.text{
+.text {
     position: relative;
-    top:100px;
-    left:50px;
+    top: 100px;
+    left: 50px;
     width: 400px;
 }
 
-.text-section h2{
+.text-section h2 {
     font-size: 20px;
     width: 300px;
 }
 
-.text-section p{
+.text-section p {
     width: 300px;
     font-size: 18px;
     letter-spacing: 1px;
 }
 
-.article-preview:nth-child(odd){
-    background: rgba(255,255,255,0.05);
+.article-preview:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.purple-section{
+.purple-section {
     background: #3f3965;
     padding: 80px;
 }
 
-.purple-section .heading-wrapper{
+.purple-section .heading-wrapper {
     margin-top: 0px;
     text-align: center;
     margin-bottom: 80px;
 }
 
-.purple-section .hr{
+.purple-section .hr {
     background: #504e54;
     width: 60%;
 }
 
-.card{
+.card {
     float: left;
     width: 50%;
     min-height: 300px;
     padding: 60px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ffffff;
     position: relative;
 }
 
-.card-group .card .big{
+.card-group .card .big {
     position: absolute;
     left: 15px;
     color: #3dec95;
 }
 
-.purple-section h3{
+.purple-section h3 {
     font-size: 24px;
 }
 
-.purple-section .card p{
+.purple-section .card p {
     font-size: 18px;
     letter-spacing: 1px;
 }
 
-.card:first-child{
-    background: rgba(0,0,0,0.04);
+.card:first-child {
+    background: rgba(0, 0, 0, 0.04);
 }
 
-.card:nth-child(2){
-    background: rgba(0,0,0,0.08);
+.card:nth-child(2) {
+    background: rgba(0, 0, 0, 0.08);
 }
 
-.card:nth-child(3){
-    background: rgba(0,0,0,0.12);
+.card:nth-child(3) {
+    background: rgba(0, 0, 0, 0.12);
 }
 
-.card:nth-child(4){
-    background: rgba(0,0,0,0.16);
+.card:nth-child(4) {
+    background: rgba(0, 0, 0, 0.16);
 }
 
-.card:nth-child(5){
-    background: rgba(0,0,0,0.20);
+.card:nth-child(5) {
+    background: rgba(0, 0, 0, 0.20);
 }
 
-.card:nth-child(6){
-    background: rgba(0,0,0,0.24);
+.card:nth-child(6) {
+    background: rgba(0, 0, 0, 0.24);
 }
 
-
-
-
-
-footer{
+footer {
     background: #333333;
     min-height: 200px;
     text-align: center;
 }
 
-.share-group{
+.share-group {
     margin: 0 auto;
     display: block;
     width: 900px;
     padding: 50px;
 }
 
-.share-group li{
+.share-group li {
     display: inline-block;
     height: 30px;
     width: 30px;
     padding: 10px;
 }
 
-footer .copy{
+footer .copy {
     font-family: "Microsoft YaHei UI Light";
 }
 
+.resume-container{
+    width: 100%;
+    font-size: 1.5em;
+    font-family: "Microsoft YaHei";
+    /*margin-top: 4em;*/
+    background-color: #fff;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+.primary{
+    width: 75%;
+    height: 100%;
+    float: left;
+    /*margin-right: -5em;*/
+    margin-top: 6em;
+}
+
+.primary .intro{
+    width: 75%;
+    background-color: #fafafa;
+    margin: 0 0 0 9em;
+    text-align: center;
+    padding: 2em 4em 2em 2em;
+}
+
+.second{
+    width: 25%;
+    height: 100%;
+    float: right;
+    margin-top: 8em;
+}
+
+.catalogue{
+    width: 50%;
+    height: 100%;
+    /*background-color: #090723;*/
+}
 
 
+.img-me{
+    border: 0.2em solid #58AFF6;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    margin-top: 0.6em;
+    /*text-align: center;*/
+}
+
+.intro-name{
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    font-weight: blod;
+}
+
+.intro-school{
+    font-size: 1.1em;
+    margin-top: 0.8em;
+}
+
+.intro-school a{
+    color: #000;
+}
+
+.intro-work{
+    font-size: 1.4em;
+    margin-top: 0.8em;
+}
+
+.title{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: #ededed;
+    margin-bottom: 2em;
+}
+
+.title .theme{
+    position: absolute;
+    left: 50%;
+    top: -1em;
+    margin-left: -4em;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 0.5em 1.7em;
+    text-align: center;
+    background-color: #eee;
+    -moz-border-radius: 1.8em;
+    -webkit-border-radius: 1.8em;
+    border-radius: 1.8em;
+}
+
+.title .theme:before,.title .theme:after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #fafafa;
+}
+
+.title .theme:before{
+    left: -20px;
+}
+
+.title .theme:after{
+    right: -20px;
+}
+
+.module{
+    margin-top: 3em;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.resume-container dl {
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+}
+
+.resume-container dt{
+    width: 95px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.resume-container dt,.resume-container dd{
+    float: left;
+    line-height: 25px;
+}
+
+.resume-container li{
+    height: 3em;
+    line-height: 3em;
+    padding-left: 2em;
+}
+
+.resume-container li a{
+    color: #000;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
+}
+
+.resume-container .catalogue-ul{
+    margin-top: 2em;
+}
+
+.resume-container .catalogue-ul li:hover{
+    background-color: #fafafa;
+}
 
 
+.resume-container .primary ul{
+    margin-left: 2em;
+}
+
+.resume-container .primary li{
+    text-align: left;
+    list-style: disc;
+    padding: 0;
+}
 
 
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
 
+.media-left, .media>.pull-left {
+    padding-right: 10px;
+}
+
+.resume-left.media-left .text {
+    position: relative;
+    top: 2px;
+    width: 50px;
+    font-weight: 600;
+}
+
+
+.media, .media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+
+ul{
+    list-style: none;
+}
+
+.media .ul-tags li {
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 25px;
+    border-radius: 15px;
+    padding: 0 15px;
+    border: 1px solid #58aff6;
+    font-size: 12px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

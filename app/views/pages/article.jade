@@ -2,7 +2,11 @@ extends ../layout
 
 block content
   .editor-container
-      form.form-horizontal(method="post", action="/admin/article", enctype="multipart/form-data")
+      form.form-horizontal#form-artilce(method="post", action="/admin/article", enctype="multipart/form-data")
+        .form-group
+          label.col-sm-2.control-label(for="inputTitle") 文章标题
+          .col-sm-10
+            input#inputTitle.form-control(type="text", name="article[title]", value=article.title)
         .form-group
           label.col-sm-2.control-label(for="inputCatetory") 文章分类
           .col-sm-10
@@ -16,22 +20,6 @@ block content
               else
                 input(type="radio", name="article[catetory]", value=cat._id)
               | #{cat.name}
-        .form-group
-          label.col-sm-2.control-label(for="inputTitle") 文章标题
-          .col-sm-10
-            input#inputTitle.form-control(type="text", name="article[title]", value=article.title)
-        .upload-container 文章图片
-          input#fileToUpload.fileupload(type='file', name='fileToUpload')
-        div
-          img#j_imgPic(src='')
-        .form-group
-          label.col-sm-2(for="inputImg") 文章图片路径
-          .col-sm-10
-            input#inputImg.form-control(type="text", name="article[img]", value=article.img)
-        .form-group
-          label.col-sm-2.control-label(for="inputSummary") 文章摘要
-          .col-sm-10
-            input#inputSummary.form-control(type="text", name="article[summary]", value=article.summary)
         .form-group
           label.col-sm-2.control-label(for="inputContent") 文章内容
           .col-sm-10
