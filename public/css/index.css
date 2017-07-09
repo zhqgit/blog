@@ -26,7 +26,6 @@ Body text:               #000
 =================================
 */
 
-
 body {
     color: #000;
     font-family: 微软雅黑;
@@ -73,7 +72,7 @@ a:active {
 
 /*
     --------------------
-       Header Styles 
+       Header Styles
     -----------------------------
  */
 .header-row {
@@ -103,6 +102,12 @@ a:active {
     background: url(../images/more.png) no-repeat;
 }
 
+
+/*
+    ------------------------
+       Navigation Styles
+    ------------------------
+ */
 .navigation {
     background-color: #000;
     position: fixed;
@@ -165,21 +170,37 @@ a:active {
     margin-bottom: 2em;
 }
 
-/*
-    --------------
-    footer styles
-    --------------
- */
 
+/*
+    ---------------------
+        footer styles
+    ---------------------
+ */
 footer {
-    background: #090723;
-    height: 50px;
+    background: #333333;
+    min-height: 20em;
     text-align: center;
 }
 
+.share-group {
+    margin: 0 auto;
+    display: block;
+    width: 90em;
+    padding: 5em;
+}
+
+.share-group li {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+.share-group li a{
+    font-size: 1.5em;
+}
+
 footer .copy {
-    color: #fff;
-    padding-top: 15px;
     font-family: "Microsoft YaHei UI Light";
 }
 
@@ -200,7 +221,6 @@ footer .copy {
     background: rgba(0, 0, 0, 0.5);
     z-index: 100;
 }
-
 
 
 .index-container {
@@ -292,102 +312,6 @@ footer .copy {
     color: #000;
 }
 
-
-/*
-    -----------------
-    weblist styles
-    -----------------
- */
-
-.weblist-container {
-    min-height: 800px;
-}
-
-/*.weblist-container .article-content:nth-child(odd) {
-    color: #fff;
-    background: rgba(0, 0, 0, .9);
-}
-
-.weblist-container .article-content:nth-child(even) {
-    color: #fff;
-    background: #3b4b99;
-}*/
-
-/*.weblist-container .weblist-title,
-.article-container .article-heading {
-    background: rgba(255, 255, 255, .5);
-    color: #000;
-    height: 60px;
-    margin-bottom: 20px;
-}
-*/
-
-/*.weblist-container .weblist-title h3,
-.weblist-container .article-title {
-    margin: 0;
-    padding-left: 30px;
-    padding-top: 15px;
-}*/
-
-.weblist-container .article-content {
-    height: 450px;
-    background: #fff;
-    margin-bottom: 10px;
-}
-
-.weblist-container .article-title {
-    padding: 15px 35px;
-    height: 150px;
-
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
-
-}
-
-.weblist-container .article-title a {
-    display: inline-block;
-    width: 100%;
-}
-
-.weblist-container .article-title h2{
-    /*color: red;*/
-    font-size: 30px;
-    font-weight: 500;
-    /*margin: 20px 0;*/
-}
-
-.weblist-container .article-content p {
-    /*padding-left: 30px;*/
-}
-
-.weblist-container .article-content .article-data{
-    padding: 20px 30px;
-}
-
-.weblist-container .article-summary {
-    padding-left: 100px;
-}
-
-.weblist-container .weblist-content .article-detail{
-
-}
-
-#article-time,#article-author,#article-catetory{
-    float: left;
-}
-
-
-.weblist-content .list-group-item,.article-container .list-group-item{
-    border:0;
-    padding: 0;
-    float: left;
-    margin-left:10px;
-}
-
-.weblist-content .span,.article-container .span{
-    margin-left: 6px;
-    font-size: 12px;
-}
-
 /*
     -----------------
     pagedetail styles
@@ -395,35 +319,37 @@ footer .copy {
  */
 
 .article-container,
-.weblist-container,
 .sign-container {
     width: 100%;
-    /*margin:50px auto 20px;*/
     padding: 60px 350px 0 350px;
-    /*background: url(../images/bg-yellow.png) repeat;*/
 }
 
 .article-container .article-panel {
     background-color: #fff;
-    padding-top: 30px;
-    padding: 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 500px;
+    position: relative;
 }
 
-.article-container .article-heading {
-    height: 150px;
-    border-bottom: 1px solid #d3d5d7;
-    padding: 30px 40px;
+.article-container .article-panel article{
+    padding-bottom: 100px;
 }
 
-.article-container .article-heading h3 {
-   color: #f15a23;
+.article-container .article-panel .accountEmail{
+    position: absolute;
+    bottom: 10px;
+    /*margin-top: 50px;*/
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
-.article-container .article-content {
-    min-height: 550px;
-    padding: 15px 30px;
+.article-container .article-panel h3{
+    width: 80%;
+    font-weight: 600;
+    margin: 20px auto;
+    text-align: center;
 }
-
 
 /*
     -----------------
@@ -527,6 +453,7 @@ footer .copy {
 }
 
 .main .article-content{
+    position: relative;
     height: 20em;
     width: 80%;
     margin: 20px auto;
@@ -536,9 +463,8 @@ footer .copy {
     padding: 20px;
 }
 
-.main .article-title h2{
-    margin: 0;
-    font-size: 1.2em;
+.main .article-title a{
+    font-size: 1.8em;
     color: #009a61;
 }
 
@@ -554,17 +480,53 @@ footer .copy {
     width: 100%;
 }
 
-.main .article-category, .main .article-tag{
-    float: left;
-    width: 100px;
-    margin-right: 20px;
-}
+/*.main .article-tag{*/
+    /*float: left;*/
+    /*margin-right: 20px;*/
+/*}*/
 
-.main .article-category{
-    background-color: #009a61;
-    height: 2em;
-}
+/*.main .article-category{*/
+    /*background-color: #009a61;*/
+    /*height: 2em;*/
+/*}*/
 
 .main .article-tag{
-    background-color: #000;
+    position: absolute;
+    bottom: 10px;
+    /*left: 5px;*/
 }
+
+.main .article-tag ul{
+    padding: 0;
+}
+
+.main .article-tag li{
+    font-size: 1.3em;
+    margin-right: 1em;
+}
+/*
+    --------------------
+        Next button Styles
+    --------------------
+*/
+/*.next{*/
+    /*width: 100px;*/
+    /*height: 50px;*/
+
+/*}*/
+
+.next-forword{
+    text-align: center;
+    height: 80px;
+    padding-top:20px;
+}
+
+.next-forword a{
+    font-size:1.5em;
+    margin:0 10px;
+}
+
+.next-forword a:hover{
+    color:#3498DB;
+}
+

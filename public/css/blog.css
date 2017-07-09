@@ -1,3 +1,31 @@
+/*
+==============================
+-----------维护信息-----------
+Site:             zhqGit.top
+Author:           zhqgit
+Updated:          2017/7/8
+Updated by:       zhqgit
+==============================
+*/
+
+/*
+=================================
+------Font Size(字体大小)--------
+Body font-size:          16px;
+=================================
+*/
+
+
+/*
+=================================
+------COLORS(公用颜色标记)--------
+Body background:         #000
+Container background:    #fff
+Links:                   #000
+Body text:               #000
+=================================
+*/
+
 /*body{
     margin: 0;
     background: #fff;
@@ -18,17 +46,6 @@ header {
     color: #ffffff;
 }
 
-a {
-    font-size: 18px;
-    font-family: 微软雅黑;
-    /*color: #ffffff;*/
-    /*text-decoration: none;*/
-}
-
-nav {
-    height: 50px;
-    background: transparent;
-}
 
 .clearfix:after {
     content: "";
@@ -36,83 +53,61 @@ nav {
     clear: both;
 }
 
-nav .logo {
-    float: left;
-}
+/*nav {*/
+/*height: 50px;*/
+/*background: transparent;*/
+/*}*/
 
-nav .logo a {
-    margin-left: 25px;
-    font-size: 18px;
-    font-family: 微软雅黑;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
+/*nav .logo {*/
+    /*float: left;*/
+/*}*/
 
-nav ul {
-    margin: 0px;
-    float: right;
-    list-style: none;
-}
+/*nav .logo a {*/
+    /*margin-left: 25px;*/
+    /*font-size: 18px;*/
+    /*font-family: 微软雅黑;*/
+    /*font-weight: 700;*/
+    /*letter-spacing: 1px;*/
+/*}*/
 
-nav ul li,
-nav .logo {
-    display: inline-block;
-    line-height: 50px;
-    margin-right: 20px;
-}
+/*nav ul {*/
+    /*margin: 0px;*/
+    /*float: right;*/
+    /*list-style: none;*/
+/*}*/
 
-nav ul li a,
-nav .logo a {
-    line-height: 50px;
-    display: inline-block;
-    height: 50px;
-    color: #ffffff;
-}
+/*nav ul li,*/
+/*nav .logo {*/
+    /*display: inline-block;*/
+    /*line-height: 50px;*/
+    /*margin-right: 20px;*/
+/*}*/
 
+/*nav ul li a,*/
+/*nav .logo a {*/
+    /*line-height: 50px;*/
+    /*display: inline-block;*/
+    /*height: 50px;*/
+    /*color: #ffffff;*/
+/*}*/
+
+/*
+    -------------------
+        banner styles
+    -------------------
+ */
 #banner {
     background: transparent;
-    height: 700px;
+    height: 73em;
 }
 
 #banner .inner {
-    max-width: 300px;
+    max-width: 30em;
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 600px;
+    top: 60em;
 }
-
-#banner .inner h1 {
-    margin: 0px;
-}
-
-
-/*#banner .inner #line{
-    width: 180px;
-    margin: 0 auto;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    padding: 15px 0px;
-}*/
-
-#banner .inner p {
-    font-family: "Microsoft YaHei UI Light";
-    font-size: 18px;
-    /*color: #ffffff;*/
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-
-/*button{
-    background: #fd0002;
-    font-size: 20px;
-    cursor: pointer;
-    border: 0px;
-    border-radius: 5%;
-    width: 150px;
-    height: 50px;
-}*/
 
 #banner .inner .more {
     /*margin-top: 260px;*/
@@ -120,63 +115,69 @@ nav .logo a {
 
 #banner .inner .more a {
     text-decoration: none;
+    font-size: 2em;
 }
 
 .hr {
-    width: 100%;
-    height: 2px;
-    margin: 20px auto;
+    /*width: 100%;*/
+    height: 0.2em;
+    margin: 2em auto;
 }
 
-.green-section {
-    text-align: center;
-    background: #23c792;
-    padding: 100px 0px;
-}
+/*
+    -------------------
+        section styles
+    -------------------
+ */
+/*.green-section {*/
+    /*text-align: center;*/
+    /*background: #23c792;*/
+    /*padding: 10em 0;*/
+/*}*/
 
-.green-wrapper {
-    max-width: 1080px;
-    margin: 0 auto;
-}
+/*.green-wrapper {*/
+    /*max-width: 1080px;*/
+    /*margin: 0 auto;*/
+/*}*/
 
-.green-section .green-wrapper h2 {
-    margin-top: 0px;
-}
+/*.green-section .green-wrapper h2 {*/
+    /*margin-top: 0px;*/
+/*}*/
 
-.green-section .green-wrapper .hr {
-    background: #b1b1b1;
-    width: 60%;
-}
+/*.green-section .green-wrapper .hr {*/
+    /*background: #b1b1b1;*/
+    /*width: 60%;*/
+/*}*/
 
-.green-section .green-wrapper p {
-    font-family: "Microsoft YaHei UI Light";
-    font-size: 14px;
-    margin-bottom: 60px;
-}
+/*.green-section .green-wrapper p {*/
+    /*font-family: "Microsoft YaHei UI Light";*/
+    /*font-size: 14px;*/
+    /*margin-bottom: 60px;*/
+/*}*/
 
-.green-section .green-wrapper .icon-team .icon {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    background: #51bdbd;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin: 20px;
-    border: 1px solid #ffffff;
-}
+/*.green-section .green-wrapper .icon-team .icon {*/
+    /*display: inline-block;*/
+    /*width: 80px;*/
+    /*height: 80px;*/
+    /*background: #51bdbd;*/
+    /*-webkit-transform: rotate(45deg);*/
+            /*transform: rotate(45deg);*/
+    /*margin: 20px;*/
+    /*border: 1px solid #ffffff;*/
+/*}*/
 
-.green-section .green-wrapper .icon-team .icon i {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    margin: 10px;
-}
+/*.green-section .green-wrapper .icon-team .icon i {*/
+    /*display: inline-block;*/
+    /*width: 80px;*/
+    /*height: 80px;*/
+    /*-webkit-transform: rotate(-45deg);*/
+            /*transform: rotate(-45deg);*/
+    /*margin: 10px;*/
+/*}*/
 
-.green-section .green-wrapper .icon-team {
-    margin-top: 60px;
-}
+/*.green-section .green-wrapper .icon-team {*/
+    /*margin-top: 60px;*/
+/*}*/
 
 .gray-section {
     background: #333333;
@@ -195,12 +196,12 @@ nav .logo a {
 }
 
 .gray-section .text-section h2 {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .article-preview>div {
     float: left;
-    font-size: 0;
+    /*font-size: 0;*/
 }
 
 
@@ -224,20 +225,19 @@ nav .logo a {
     left: 50px;*/
 }
 
-.text {
+.gray-section .text {
     position: relative;
-    top: 100px;
-    left: 50px;
-    width: 400px;
+    top: 10em;
+    left: 5em;
+    width: 40em;
 }
 
 .text-section h2 {
-    font-size: 20px;
-    width: 300px;
+    width: 15em;
 }
 
 .text-section p {
-    width: 300px;
+    width: 30em;
     font-size: 18px;
     letter-spacing: 1px;
 }
@@ -246,15 +246,21 @@ nav .logo a {
     background: rgba(255, 255, 255, 0.05);
 }
 
+/*
+    -----------------------------
+        purple-section styles
+    -----------------------------
+ */
+
 .purple-section {
     background: #3f3965;
-    padding: 80px;
+    padding: 8em;
 }
 
 .purple-section .heading-wrapper {
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 8em;
 }
 
 .purple-section .hr {
@@ -265,8 +271,8 @@ nav .logo a {
 .card {
     float: left;
     width: 50%;
-    min-height: 300px;
-    padding: 60px;
+    min-height: 30em;
+    padding: 6em;
     box-sizing: border-box;
     border: 1px solid #ffffff;
     position: relative;
@@ -278,9 +284,6 @@ nav .logo a {
     color: #3dec95;
 }
 
-.purple-section h3 {
-    font-size: 24px;
-}
 
 .purple-section .card p {
     font-size: 18px;
@@ -311,48 +314,25 @@ nav .logo a {
     background: rgba(0, 0, 0, 0.24);
 }
 
-footer {
-    background: #333333;
-    min-height: 200px;
-    text-align: center;
-}
 
-.share-group {
-    margin: 0 auto;
-    display: block;
-    width: 900px;
-    padding: 50px;
-}
 
-.share-group li {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    padding: 10px;
-}
-
-footer .copy {
-    font-family: "Microsoft YaHei UI Light";
-}
 
 .resume-container{
     width: 100%;
     font-size: 1.5em;
-    font-family: "Microsoft YaHei";
+    /*font-family: "Microsoft YaHei";*/
     /*margin-top: 4em;*/
     background-color: #fff;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 .primary{
     width: 75%;
-    height: 100%;
     float: left;
-    /*margin-right: -5em;*/
     margin-top: 6em;
 }
 
 .primary .intro{
-    width: 75%;
+    width: 80%;
     background-color: #fafafa;
     margin: 0 0 0 9em;
     text-align: center;
@@ -407,8 +387,20 @@ footer .copy {
     height: 1px;
     width: 100%;
     background: #ededed;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
+
+.title a{
+    color:#000;
+}
+
+/*.title a:link,.title a:visited{*/
+    /*color:#000;*/
+/*}*/
+
+/*.title a:hover{*/
+    /*color:#000;*/
+/*}*/
 
 .title .theme{
     position: absolute;
@@ -492,7 +484,7 @@ footer .copy {
 
 
 .resume-container .primary ul{
-    margin-left: 2em;
+    /*margin-left: 2em;*/
 }
 
 .resume-container .primary li{
@@ -533,11 +525,12 @@ ul{
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
-    line-height: 25px;
+    height: 35px;
+    line-height: 35px;
     border-radius: 15px;
     padding: 0 15px;
     border: 1px solid #58aff6;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 li {

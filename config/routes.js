@@ -49,7 +49,7 @@ module.exports = function (app) {
   app.get('/admin/article/update/:id', User.signinRequired, User.adminRequired, Article.update)
   app.post('/admin/article', multipartMiddleware, User.signinRequired, User.adminRequired, Article.save)
   app.get('/admin/article/list', User.signinRequired, User.adminRequired, Article.list)
-  app.get('/admin/article/weblist', Article.weblist)
+  app.get('/admin/article/weblist',Article.weblist)
   app.get('/admin/article/lifelist', Article.lifelist)
   app.get('/admin/article/my', Article.mydetail)
   app.get('/admin/article/resume', Article.resume)

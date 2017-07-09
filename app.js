@@ -99,7 +99,7 @@ app.use(session({
 }))
 
 //busboy这个包是用来当传输的数据是HTML表单标签字符串时解析
-// app.use(busboy());
+app.use(busboy());
 
 
 var env = process.env.NODE_ENV || 'development';

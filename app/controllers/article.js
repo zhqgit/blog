@@ -39,6 +39,7 @@ exports.pagedetail = function(req, res) {
 
 // admin new page
 exports.new = function(req, res) {
+
     Catetory.find({}, function(err, catetories) {
         res.render('article', {
             title: '文章录入页',
@@ -186,28 +187,62 @@ exports.list = function(req, res) {
 }
 
 
+
+
+//获得总页数
+exports.weblisttotal = function (req,res,next) {
+    Catetory
+        .findOne({ 'name': '前端' },function (err, items) {
+            var totalPageNum,
+                onePageNum = 10;
+            totalPageNum = items.length;
+            console.log(totalPageNum);
+            next();
+        })
+}
+
+//伪分页的实现方式
+
 //list web-articles page
 //populate是mongoose的方法
 //解构artilces这个字段
 //select挑选的字段
 //限制返回artilces字段个数
+
+var totalPageNum,
+    onePageNum = 3;
 exports.weblist = function(req, res) {
+    var page = req.query.p ? parseInt(req.query.p) : 1;
+    //得到总的页数
+    Catetory
+        .findOne({ 'name': '前端' },function (err, items) {
+            totalPageNum = Math.ceil(items.articles.length / onePageNum);
+            console.log(totalPageNum);
+            console.log(items);
+        })
+
     Catetory
         .findOne({ 'name': '前端' })
         .populate({
             path: 'articles',
-            select: 'title pv content',
-            options:{limit:5}
+            select: 'title pv content meta __v',
+
+            //skip忽略
+            options:{skip:2*(page-1),limit:onePageNum}
         })
         .exec(function(err, catetory) {
+            // totalPageNum = Math.ceil(catetory.articles.length / onePageNum);
             if (err) {
                 console.log(err)
             }
             res.render('weblist', {
-                catetory: catetory
+                catetory: catetory,
+                totalPageNum: totalPageNum,
+                page: page
             })
         })
 }
+
 
 
 // // admin update page
@@ -231,23 +266,36 @@ exports.weblist = function(req, res) {
 
 //list life-articles page
 exports.lifelist = function(req, res) {
+    var page = req.query.p ? parseInt(req.query.p) : 1;
+    //得到总的页数
+    Catetory
+        .findOne({ 'name': '杂记' },function (err, items) {
+            totalPageNum = Math.ceil(items.articles.length / onePageNum);
+            console.log(totalPageNum);
+            console.log(items);
+        })
+
     Catetory
         .findOne({ 'name': '杂记' })
         .populate({
             path: 'articles',
-            select: 'title content summary img'
-                // options:{limit:5}
+            select: 'title pv content meta __v',
+
+            //skip忽略
+            options:{skip:2*(page-1),limit:onePageNum}
         })
         .exec(function(err, catetory) {
+            // totalPageNum = Math.ceil(catetory.articles.length / onePageNum);
             if (err) {
                 console.log(err)
             }
-            res.render('lifelist', {
-                catetory: catetory
+            res.render('weblist', {
+                catetory: catetory,
+                totalPageNum: totalPageNum,
+                page: page
             })
         })
 }
-
 
 // list page
 exports.del = function(req, res) {

@@ -7,25 +7,28 @@ block content
 				each item in catetory.articles
 					.article-content
 						.article-title
-							a(href="/article/#{item._id}")
-								h2 !{item.title}
+							a(href="/article/#{item._id}") !{item.title}
 						.article-data
 							-var test = item.content.replace(/<\/?.+?>/g,"");
 							-var tt = test.substr(0,400);
 							p !{tt}...
 							div.article-info
-								div.article-category
-									a
+								//div.article-category
+								//	a
 								div.article-tag
 									ul
-										li
-							//- ul.list-group
-							//- 	li.list-group-item
-							//- 		button.btn.btn-default
-							//- 			i.icon-cloud
-							//- 			span.span #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
-							//- 	li.list-group-item
-							//- 		button.btn.btn-default
-							//- 			i.icon-cloud
-							//- 			span.span 前端
+										li.icon-time   !{moment(item.meta.updateAt).format('MM/DD/YYYY')}
+										li.icon-eye-open   !{item.pv}
+										li.icon-comment   !{item.__v}
+		.next-forword
+			if page > 1
+				a.forword(href="?p=" + (page - 1))
+					i.icon-double-angle-left.icon-large
+					span 上一页
+			if page < totalPageNum
+				a.next(href="?p=" + (page + 1))
+					span 下一页
+					i.icon-double-angle-right.icon-large
+		//a(href="#") !{catetory.articles.length}
+		//a(href="#") !{totalPageNum}
 	//- script(src="/js/index.js")

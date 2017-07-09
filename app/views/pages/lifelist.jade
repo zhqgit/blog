@@ -1,21 +1,33 @@
 extends ../layout
 
 block content
-	.weblist-container
+	.main
 		.weblist-content
 			if catetory.articles && catetory.articles.length > 0
 				each item in catetory.articles
 					.article-content
-						.article-title 
+						.article-title
 							a(href="/article/#{item._id}")
 								h2 !{item.title}
-							.article-detail
-								ul.list-group
-									li.list-group-item
-										button.btn.btn-default 
-											i.icon-cloud
-											span.span #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
-									li.list-group-item
-										button.btn.btn-default 
-											i.icon-cloud
-											span.span 杂记
+						.article-data
+							-var test = item.content.replace(/<\/?.+?>/g,"");
+							-var tt = test.substr(0,400);
+							p !{tt}...
+							div.article-info
+								div.article-category
+									a
+								div.article-tag
+									ul
+										li
+		.next-forword
+			if page > 1
+				a(href="?p=" + (page - 1))
+					i.icon-double-angle-left.icon-large
+					span 上一页
+			if page < totalPageNum
+				a(href="?p=" + (page + 1))
+					span 下一页
+					i.icon-double-angle-right.icon-large
+		//a(href="#") !{catetory.articles.length}
+		//a(href="#") !{totalPageNum}
+	//- script(src="/js/index.js")
