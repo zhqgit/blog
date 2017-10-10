@@ -210,7 +210,7 @@ exports.weblisttotal = function (req,res,next) {
 //限制返回artilces字段个数
 
 var totalPageNum,
-    onePageNum = 3;
+    onePageNum = 4;
 exports.weblist = function(req, res) {
     var page = req.query.p ? parseInt(req.query.p) : 1;
     //得到总的页数
@@ -228,7 +228,7 @@ exports.weblist = function(req, res) {
             select: 'title pv content meta __v',
 
             //skip忽略
-            options:{skip:2*(page-1),limit:onePageNum}
+            options:{skip:4*(page-1),limit:onePageNum}
         })
         .exec(function(err, catetory) {
             // totalPageNum = Math.ceil(catetory.articles.length / onePageNum);
