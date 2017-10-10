@@ -2,6 +2,6 @@
   
     
     
-![gif1](http://oliwae5lt.bkt.clouddn.com/nodeBlog/gif/nodeBlog1.gif)
+![gif1](http://oliwae5lt.bkt.clouddn.com/nodeBlog/gif/nodeBlog1%20.gif)
 
 ![gif2](http://oliwae5lt.bkt.clouddn.com/nodeBlog/gif/nodeBlog2.gif)
